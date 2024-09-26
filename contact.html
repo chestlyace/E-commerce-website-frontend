@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>King Ace Electronics</title>
+        <meta name="description" content="King Ace Electronics - Leading Electronics Manufacturer">
+        <meta name="keywords" content="Electronics, Laptops, Computers, Shop">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="home.css">
+        <link rel="stylesheet" href="bootstrap-5.3.3-dist/css/bootstrap.min.css">
+        <script src="bootstrap-5.3.3-dist/js/bootstrap.bundle.min.js"></script>
+        <script src="home.js"></script>
+        <style>
+            
+           
+        </style>
+    </head>
+    <body>
+    
+        <header class="bg-light p-3 mb-4 sticky-top">
+            <div class="container d-flex justify-content-between align-items-center">
+                <a href="home.html"><img src="img/logo.png" class="logo img-fluid" alt="Logo"></a>
+                <h4>KING ACE ELECTRONICS</h4>
+                <ul class="nav navBar position-relative">
+                    <li class="nav-item"><a class="nav-link" href="home.html">Home</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="productDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Products
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="productDropdown">
+                            <li><a class="dropdown-item" href="laptops.html">Laptops</a></li>
+                            <li><a class="dropdown-item" href="phones.html">Phones</a></li>
+                            <li><a class="dropdown-item" href="accessories.html">Accessories</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                    <li class="nav-item position-relative">
+                        <a class="nav-link" href="cart.html">Cart</a>
+                        <span class="cart-count">0</span>
+                    </li>
+                    <li class="nav-item">
+                        <button class="btn btn-danger ms-3" onclick="resetCart();">Reset Cart</button>
+                    </li>
+                </ul>
+            </div>
+        </header>
+
+    <section>
+        <div class="container-fluid bg-image hero">
+            <span class="ms-3">GET IN TOUCH</span>
+            <h1 class="ms-3">Visit Our Shop Or Contact Us Today</h1>
+        </div>
+    </section>
+
+    <section>
+        <div class="container mt-5">
+            <div class="row">
+                <div class="col-md-6">
+                    <h3>Contact Information</h3>
+                    <p>Etougebe, Yaounde, Cameroon</p>
+                    <p>Phone: +237 667-456-7890</p>
+                    <p>Email: kingace@gmail.com</p>
+                </div>
+                <div class="col-md-6">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3980.795281862301!2d11.477987573889902!3d3.8540678484173907!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x108bcfb3584ddb2b%3A0xdd8692a7c6effd2a!2sCamsoft%20Group%20Sarl!5e0!3m2!1sen!2scm!4v1722707405506!5m2!1sen!2scm" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="container mt-5">
+            <h3>We Love to Hear from You!</h3>
+            <div class="form1">
+                <form action="">
+                    <div class="mb-3">
+                        <label for="name" class="form-label">Name</label>
+                        <input type="text" class="form-control" id="name" placeholder="Your Name">
+                    </div>
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Email</label>
+                        <input type="email" class="form-control" id="email" placeholder="Your Email">
+                    </div>
+                    <div class="mb-3">
+                        <label for="message" class="form-label">Message</label>
+                        <textarea class="form-control" id="message" rows="3" placeholder="Your Message"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary mb-2">Submit</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-dark text-white py-4">
+      <div class="container">
+          <div class="row">
+              <div class="col-md-4">
+                  <h4>Contact</h4>
+                  <p>Contact details and form here</p>
+              </div>
+              <div class="col-md-4">
+                  <h4>About</h4>
+                  <p>Our founders, saw a gap in the market for a reliable, customer-focused laptop shop that offers a wide range of products from leading brands. What began as a small store has grown into a trusted online retailer, thanks to our loyal customers and dedicated team.</p>
+              </div>
+              <div class="col-md-4">
+                 <h6>We stay on top of the latest trends and technologies to offer the newest and most advanced laptops on the market.</h6>
+              </div>
+          </div>
+      </div>
+  </footer>
+</body>
+</html>

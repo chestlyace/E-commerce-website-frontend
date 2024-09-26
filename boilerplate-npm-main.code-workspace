@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "../../boilerplate-npm-main"
+		},
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "E-commerce website"
+	}
+}

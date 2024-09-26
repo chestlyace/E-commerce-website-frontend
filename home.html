@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>King Ace Electronics</title>
+    <meta name="description" content="King Ace Electronics - Leading Electronics Manufacturer">
+    <meta name="keywords" content="Electronics, Laptops, Computers, Shop">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="bootstrap-5.3.3-dist/css/bootstrap.min.css">
+    <script src="bootstrap-5.3.3-dist/js/bootstrap.bundle.min.js"></script>
+    <script src="home.js"></script>
+        
+       
+</head>
+<body>
+
+    <header class="bg-light p-3 mb-4 sticky-top">
+        <div class="container d-flex justify-content-between align-items-center">
+            <a href="home.html"><img src="img/logo.png" class="logo img-fluid" alt="Logo"></a>
+            <h4>KING ACE ELECTRONICS</h4>
+          
+
+        </div>
+            <ul class="nav navBar position-relative">
+                <li class="nav-item">
+                    <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#registerModal">Register</a>
+                </li>
+                
+    
+                <li class="nav-item">
+                    <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#loginModal">Login</a>
+                </li>
+                <li class="nav-item"><a class="nav-link" href="home.html">Home</a></li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="productDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Products
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="productDropdown">
+                        <li><a class="dropdown-item" href="shop.html">Laptops</a></li>
+                        <li><a class="dropdown-item" href="phones.html">Phones</a></li>
+                        <li><a class="dropdown-item" href="accessories.html">Accessories</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+                <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                <li class="nav-item position-relative">
+                    <a class="nav-link" href="cart.html">Cart</a>
+                    <span class="cart-count">3</span>
+                </li>
+                <li class="nav-item">
+                    <button class="btn btn-danger ms-3" onclick="resetCart();">Reset Cart</button>
+                </li>
+            </ul>
+        </div>
+
+        <form id="searchForm" class="d-flex me-3">
+            <input type="text" id="searchInput" class="form-control" placeholder="Search products..." aria-label="Search" required>
+            <button type="submit" class="btn btn-primary">Search</button>
+        </form>
+        
+    </header>
+
+    <!-- Hero Section with Carousel -->
+    <section id="hero" class="bg-image text-white text-center d-flex align-items-center justify-content-center position-relative" style="height: 100vh;">
+        <div class="hero-overlay"></div>
+       <!-- Carousel Autoplay Setup -->
+<div id="heroCarousel" class="carousel slide hero-content" data-bs-ride="carousel" data-bs-interval="3000">
+
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="img/Laptops_PC_shop_store.jpg" class="d-block w-100" alt="First Slide">
+                    <div class="carousel-caption">
+                        <h1>Welcome to King Ace Electronics</h1>
+                        <p>We are a leading electronics manufacturer in the region.</p>
+                        <a href="shop.html" class="btn btn-primary">Shop Now!</a>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="img/hero2.jpg" class="d-block w-100" alt="Second Slide">
+                    <div class="carousel-caption">
+                        <h1>Latest Laptops Available</h1>
+                        <p>Explore our wide range of high-quality laptops.</p>
+                        <a href="shop.html" class="btn btn-primary">Browse Products</a>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="img/hero3.jpg" class="d-block w-100" alt="Third Slide">
+                    <div class="carousel-caption">
+                        <h1>Unbeatable Prices</h1>
+                        <p>Get the best deals on top electronics.</p>
+                        <a href="shop.html" class="btn btn-primary">Shop Now!</a>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </section>
+
+    
+    <section id="products" class="py-5">
+        <div class="container text-center">
+            <h1>Featured Products</h1>
+            <h4>We have high quality Laptops at very affordable prices</h4>
+            <div class="row g-5 align-items-center justify-content-center">
+                
+                <div class="col-md-4 col-lg-3 product me-3">
+                    <div class="border p-3">
+                        <div onclick="window.location.href='single-prod.html';"><img class="pimg img-fluid" src="img/hp.webp" alt="HP Pro Book"></div>
+                        <div class="desc mt-3">
+                            <h5>HP Pavillon 2023</h5>
+                            <h4>200,000 FCFA</h4>
+                            <button class="btn btn-primary" onclick="addToCart(this, 'HP Pavillon 2023');">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-lg-3 product me-3" >
+                    <div class="border p-3">
+                        <div onclick="window.location.href='single-prod.html';"><img class="pimg img-fluid" src="img/lenovo.jpg" alt="lenovo"></div>
+                        <div class="desc mt-3">
+                            <h5>Lenovo Idea pad</h5>
+                            <h4>130,000 FCFA</h4>
+                            <button class="btn btn-primary" onclick="addToCart(this, 'Lenovo Idea pad');" >Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="col-md-4 col-lg-3 product me-3" >
+                  <div class="border p-3">
+                      <div onclick="window.location.href='single-prod.html';"><img class="pimg img-fluid" src="img/mac.jpg" alt="mac"></div>
+                      <div class="desc mt-3">
+                          <h5>Mac Book Pro 2015</h5>
+                          <h4>250,000 FCFA</h4>
+                          <button class="btn btn-primary" onclick="addToCart(this, 'Mac Book Pro 2015');" >Add to Cart</button>
+                      </div>
+                  </div>
+              </div>
+    
+              <div class="col-md-4 col-lg-3 product me-3" >
+                <div class="border p-3">
+                    <div onclick="window.location.href='single-prod.html';"><img class="pimg img-fluid" src="img/XPS17.jpg" alt="HP Pro Book"></div>
+                    <div class="desc mt-3">
+                        <h5>ASUS</h5>
+                        <h4>350,000 FCFA</h4>
+                        <button class="btn btn-primary" onclick="addToCart(this, 'ASUS');" >Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="col-md-4 col-lg-3 product me-3" >
+              <div class="border p-3">
+                  <div onclick="window.location.href='single-prod.html';"><img class="pimg img-fluid" src="img/notebook-g16-7630-nt-black-gallery-1.avif" alt="HP Pro Book"></div>
+                  <div class="desc mt-3">
+                      <h5>Dell G16</h5>
+                      <h4>400,000 FCFA</h4>
+                      <button class="btn btn-primary" onclick="addToCart(this, 'Dell G16');" >Add to Cart</button>
+                  </div>
+              </div>
+          </div>
+
+          <div class="col-md-4 col-lg-3 product me-3" >
+            <div class="border p-3">
+                <div onclick="window.location.href='single-prod.html';"><img class="pimg img-fluid" src="img/dell.webp" alt="dell"> </div>
+                <div class="desc mt-3">
+                    <h5>Dell Latitude 7480</h5>
+                    <h4>170,000 FCFA</h4>
+                    <button class="btn btn-primary" onclick="addToCart(this, 'Dell Latitude 7480');" >Add to Cart</button>
+                </div>
+            </div>
+        </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section id="newsletter" class="py-5 bg-light">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <h2>Subscribe to Our Newsletter</h2>
+                    <p>Get the latest news, promotions, and offers on our shop straight to your inbox.</p>
+                </div>
+                <div class="col-md-6">
+                    <form class="d-flex" onsubmit="subscribe(event);">
+                        <input type="email" class="form-control me-2" placeholder="Your Email Address" required>
+                        <button type="submit" class="btn btn-primary">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<!-- Register Modal -->
+<div class="modal fade" id="registerModal" tabindex="-1" aria-labelledby="registerModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="registerModalLabel">Register</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form id="registerForm">
+                    <div class="mb-3">
+                        <label for="registerUsername" class="form-label">Username</label>
+                        <input type="text" class="form-control" id="registerUsername" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="registerPassword" class="form-label">Password</label>
+                        <input type="password" class="form-control" id="registerPassword" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Register</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+    <!-- Login Modal -->
+<div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="loginModalLabel">Login</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form id="loginForm">
+                    <div class="mb-3">
+                        <label for="username" class="form-label">Username</label>
+                        <input type="text" class="form-control" id="username" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="password" class="form-label">Password</label>
+                        <input type="password" class="form-control" id="password" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Login</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+    <!-- Footer Section -->
+    <footer class="bg-dark text-white py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h4>Contact</h4>
+                    <p>Etougebe, Yaounde, Cameroon <br>
+                    Phone: +237 667-456-7890 <br>
+                    Email: kingace@gmail.com</p>
+                </div>
+                <div class="col-md-4">
+                    <h4>About</h4>
+                    <p>Our founders saw a gap in the market for a reliable, customer-focused laptop shop that offers a wide range of products from leading brands. What began as a small store has grown into a trusted online retailer, thanks to our loyal customers and dedicated team.</p>
+                </div>
+                <div class="col-md-4">
+                    <h6>We stay on top of the latest trends and technologies to offer the newest and most advanced laptops on the market.</h6>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+   
+        
+</body>
+</html>

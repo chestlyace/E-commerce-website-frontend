@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Products</title>
+        <meta name="description" content="King Ace Electronics - Leading Electronics Manufacturer">
+        <meta name="keywords" content="Electronics, Laptops, Computers, Shop">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="shop.css">
+        <link rel="stylesheet" href="bootstrap-5.3.3-dist/css/bootstrap.min.css">
+        <script src="bootstrap-5.3.3-dist/js/bootstrap.bundle.min.js"></script>
+        <script src="shop.js"></script>
+        <style>
+            
+           
+        </style>
+    </head>
+    <body>
+    
+        <header class="bg-light p-3 mb-4 sticky-top">
+            <div class="container d-flex justify-content-between align-items-center">
+                <a href="home.html"><img src="img/logo.png" class="logo img-fluid" alt="Logo"></a>
+                <h4>KING ACE ELECTRONICS</h4>
+                <ul class="nav navBar position-relative">
+                    <li class="nav-item"><a class="nav-link" href="home.html">Home</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="productDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Products
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="productDropdown">
+                            <li><a class="dropdown-item" href="shop.html">Laptops</a></li>
+                            <li><a class="dropdown-item" href="phones.html">Phones</a></li>
+                            <li><a class="dropdown-item" href="accessories.html">Accessories</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                    <li class="nav-item position-relative">
+                        <a class="nav-link" href="cart.html">Cart</a>
+                        <span class="cart-count">0</span>
+                    </li>
+                    <li class="nav-item">
+                        <button class="btn btn-danger ms-3" onclick="resetCart();">Reset Cart</button>
+                    </li>
+                </ul>
+            </div>
+        </header>
+
+    <section id="products" class="container">
+        <h1 class="">Products</h1>
+        <h4 class="mb-4 ">We carefully select our laptops from reputable brands to ensure that our customers receive only the best products.</h4>
+
+        <div class="mb-3">
+            <label for="sortOptions" class="form-label">Sort by:</label>
+            <select id="sortOptions" class="form-select" onchange="sortProducts()">
+                <option value="default">Default</option>
+                <option value="priceLowToHigh">Price: Low to High</option>
+                <option value="priceHighToLow">Price: High to Low</option>
+            </select>
+        </div>
+        
+        <input type="text" id="productSearch" placeholder="Search for products..." onkeyup="searchProducts()" class="form-control mb-4">
+
+
+        <div class="container-fluid align-items-center justify-content-center ms-5">
+            <div class="row g-5">
+                <div class="col-md-2 product me-3">
+                    <div class="border mt-3 imgdesc" onclick="window.location.href='single-prod.html';" >
+                        <img class=" pimg img-fluid" src="img/hp.webp" alt="">
+                    </div>
+                    <div class="mt-3 desc">
+                        <h5>HP Pro Book</h5>
+                        <h4>150,000 FCFA</h4>
+                        <div><button class="btn btn-primary mb-5"  onclick="addToCart(this, 'HP Pro Book');"  style="display:block;">Add to Cart</button>
+                        
+                    </div>
+                        
+                    </div>
+                </div>
+                <div class="col-md-2 product me-3" >
+                  <div class="border mt-3 imgdesc" onclick="window.location.href='single-prod.html';">
+                      <img class=" pimg img-fluid" src="img/asus x571.png" alt="">
+                  </div>
+                  <div class="mt-3 desc">
+                      <h5>ASUS X571</h5>
+                      <h4>300,000 FCFA</h4>
+                      <button class="btn btn-primary mb-5"  onclick="addToCart(this, 'ASUS X571');">Add to Cart</button>
+                  </div>
+              </div>
+
+              <div class="col-md-2 product me-3" >
+                <div class="border mt-3 imgdesc" onclick="window.location.href='single-prod.html';">
+                    <img class=" pimg img-fluid" src="img/220715121407-macbook-air-m2-review-1.jpg" alt="">
+                </div>
+                <div class="mt-3 desc">
+                    <h5>MacBook Air M2</h5>
+                    <h4>350,000 FCFA</h4>
+                    <button class="btn btn-primary mb-5"  onclick="addToCart(this, 'MacBook Air M2');">Add to Cart</button>
+                </div>
+            </div>
+
+            <div class="col-md-2 product me-3" >
+              <div class="border mt-3 imgdesc" onclick="window.location.href='single-prod.html';">
+                  <img class=" pimg img-fluid" src="img/acer chrome.webp" alt="">
+              </div>
+              <div class="mt-3 desc">
+                  <h5>Acer ChromeBook</h5>
+                  <h4>120,000 FCFA</h4>
+                  <button class="btn btn-primary mb-5"  onclick="addToCart(this, 'Acer ChromeBook');">Add to Cart</button>
+              </div>
+          </div>
+
+          <div class="col-md-2 product me-3" >
+            <div class="border mt-3 imgdesc" onclick="window.location.href='single-prod.html';">
+                <img class=" pimg img-fluid" src="img/64c41e4771c5f52216163af1-hp-stream-14-laptop-intel-celeron.jpg" alt="">
+            </div>
+            <div class="mt-3 desc">
+                <h5>HP Stream 14</h5>
+                <h4>400,000 FCFA</h4>
+                <button class="btn btn-primary mb-5"  onclick="addToCart(this, 'HP Stream 14');">Add to Cart</button>
+                
+            </div>
+        </div>
+
+        <div class="col-md-2 product me-3" >
+          <div class="border mt-3 imgdesc" onclick="window.location.href='single-prod.html';">
+              <img class=" pimg img-fluid" src="img/HP-Envy-16-07-920x613.webp" alt="">
+          </div>
+          <div class="mt-3 desc">
+              <h5>HP Envy 2022</h5>
+              <h4>250,000 FCFA</h4>
+              <button class="btn btn-primary mb-5"  onclick="addToCart(this, 'HP Envy 2022');">Add to Cart</button>
+          </div>
+      </div>
+
+      <div class="col-md-2 product me-3" >
+        <div class="border mt-3 imgdesc" onclick="window.location.href='single-prod.html';">
+            <img class=" pimg img-fluid" src="img/asus zenbook.jpeg" alt="">
+        </div>
+        <div class="mt-3 desc">
+            <h5>ASUS ZenBook</h5>
+            <h4>400,000 FCFA</h4>
+            <button class="btn btn-primary mb-5"  onclick="addToCart(this, 'ASUS ZenBook');">Add to Cart</button>
+        </div>
+    </div>
+
+    <div class="col-md-2 product me-3" >
+      <div class="border mt-3 imgdesc" onclick="window.location.href='single-prod.html';">
+          <img class=" pimg img-fluid" src="img/MSFT-RWGaM8-Surface-Pro-7-in-Laptop-Mode.jpeg" alt="">
+      </div>
+      <div class="mt-3 desc">
+          <h5>Surface Pro 7</h5>
+          <h4>500,000 FCFA</h4>
+          <button class="btn btn-primary mb-5"  onclick="addToCart(this, 'Surface Pro 7');">Add to Cart</button>
+      </div>
+  </div>
+
+  <div class="col-md-2 product me-3" >
+    <div class="border mt-3 imgdesc" onclick="window.location.href='single-prod.html';">
+        <img class=" pimg img-fluid" src="img/Macbook_Air_15_inch_-_2_(blurred).jpg" alt="">
+    </div>
+    <div class="mt-3 desc">
+        <h5>MacBook Air 2015</h5>
+        <h4>350,000 FCFA</h4>
+        <button class="btn btn-primary mb-5"  onclick="addToCart(this, 'MacBook Air 2015');">Add to Cart</button>
+    </div>
+</div>
+
+<div class="col-md-2 product me-3" >
+  <div class="border mt-3 imgdesc" onclick="window.location.href='single-prod.html';">
+      <img class=" pimg img-fluid" src="img/dell inspiron.webp" alt="">
+  </div>
+  <div class="mt-3 desc">
+      <h5>DELL Inspiron</h5>
+      <h4>250,000 FCFA</h4>
+      <button class="btn btn-primary mb-5"  onclick="addToCart(this, 'DELL Inspiron');">Add to Cart</button>
+  </div>
+</div>
+
+<div class="col-md-2 product me-3" >
+  <div class="border mt-3 imgdesc" onclick="window.location.href='single-prod.html';">
+      <img class=" pimg img-fluid" src="img/Asus-Strix-G-HN083W-493838344-i-2-1200Wx1200H.jpeg" alt="">
+  </div>
+  <div class="mt-3 desc">
+      <h5>ASUS Strix G</h5>
+      <h4>350,000 FCFA</h4>
+      <button class="btn btn-primary mb-5"  onclick="addToCart(this, 'ASUS Strix G');">Add to Cart</button>
+  </div>
+</div>
+
+<div class="col-md-2 product me-3" >
+  <div class="border mt-3 imgdesc" onclick="window.location.href='single-prod.html';">
+      <img class=" pimg img-fluid" src="img/hp elite.png" alt="">
+  </div>
+  <div class="mt-3 desc">
+      <h5>HP Elite 4668</h5>
+      <h4>370,000 FCFA</h4>
+      <button class="btn btn-primary mb-5"  onclick="addToCart(this, 'HP Elite 4668');">Add to Cart</button>
+  </div>
+</div>
+
+<div class="col-md-2 product me-3" >
+  <div class="border mt-3 imgdesc" onclick="window.location.href='single-prod.html';">
+      <img class=" pimg img-fluid" src="img/Surface_Laptop_Studio_1632328001167_1632328021751.avif" alt="">
+  </div>
+  <div class="mt-3 desc">
+      <h5>Surface Studio 9</h5>
+      <h4>650,000 FCFA</h4>
+      <button class="btn btn-primary mb-5"  onclick="addToCart(this, 'Surface Studio 9');">Add to Cart</button>
+  </div>
+</div>
+
+<div class="col-md-2 product me-3" >
+  <div class="border mt-3 imgdesc" onclick="window.location.href='single-prod.html';">
+      <img class=" pimg img-fluid" src="img/ie-feature-chromebook-534558125.avif" alt="">
+  </div>
+  <div class="mt-3 desc">
+      <h5>SAMSUNG Chromebook</h5>
+      <h4>100,000 FCFA</h4>
+      <button class="btn btn-primary mb-5"  onclick="addToCart(this, 'SAMSUNG Chromebook');">Add to Cart</button>
+  </div>
+</div>
+
+<div class="col-md-2 product me-3" >
+  <div class="border mt-3 imgdesc" onclick="window.location.href='single-prod.html';">
+      <img class=" pimg img-fluid" src="img/macbook pro m1.jpg" alt="">
+  </div>
+  <div class="mt-3 desc">
+      <h5>MacBook Pro M1</h5>
+      <h4>450,000 FCFA</h4>
+      <button class="btn btn-primary mb-5"  onclick="addToCart(this, 'MacBook Pro M1');">Add to Cart</button>
+  </div>
+</div>
+                
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-dark text-white py-4 mt-3">
+      <div class="container">
+          <div class="row">
+              <div class="col-md-4">
+                  <h4>Contact</h4>
+                  <p>Etougebe, Yaounde, Cameroon <br>
+
+                    Phone: +237 667-456-7890 <br>
+                    
+                    Email: kingace@gmail.com</p>
+              </div>
+              <div class="col-md-4">
+                  <h4>About</h4>
+                  <p>Our founders, saw a gap in the market for a reliable, customer-focused laptop shop that offers a wide range of products from leading brands. What began as a small store has grown into a trusted online retailer, thanks to our loyal customers and dedicated team.</p>
+              </div>
+              <div class="col-md-4">
+                  <h6>We stay on top of the latest trends and technologies to offer the newest and most advanced laptops on the market.</h6>
+              </div>
+          </div>
+      </div>
+  </footer>
+  
+</body>
+</html>
